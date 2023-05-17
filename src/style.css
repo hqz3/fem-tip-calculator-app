@@ -39,7 +39,27 @@ body {
   position: relative;
 }
 
-.container {
+label {
+  position: relative;
+}
+
+button {
+  background-color: var(--darkCyan);
+  border-radius: 0.5rem;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+}
+
+button:hover {
+  background-color: var(--strongCyan);
+  color: var(--darkCyan);
+}
+
+main {
   top: 47%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -56,16 +76,109 @@ body {
   background-color: white;
   border-radius: var(--borderRadius);
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
   display: grid;
-  gap: 2rem;
   grid-template-columns: repeat(2, 1fr);
+
+  gap: 4rem;
   height: 47rem;
   margin-inline: auto;
   padding: 3rem;
   width: 92rem;
 }
 
-.calculation {
+.input__container {
+  font-size: 1.8rem;
+  color: var(--darkGrayCyan);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.bill__container,
+.people__container {
+  position: relative;
+}
+
+.bill__input,
+.people__input {
+  background-color: var(--veryLightGrayishCyan);
+  border-radius: 0.5rem;
+  border: none;
+  color: var(--lightGrayCyan);
+  display: block;
+  font-family: inherit;
+  font-size: 2.8rem;
+  height: 5.5rem;
+  outline: none;
+  padding: 1rem;
+  text-align: end;
+  width: 100%;
+}
+
+.bill__input:focus,
+.people__input:focus,
+.tip__custom:focus {
+  outline: 2px solid var(--strongCyan);
+}
+
+.bill__input.error,
+.people__input.error {
+  border: 2px solid orange;
+  outline: none;
+}
+
+.zero {
+  display: none;
+  position: absolute;
+  right: 0;
+  color: orange;
+}
+.zero.error {
+  display: inline-block;
+}
+
+.dollar--logo,
+.people--logo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 2rem;
+  width: 1.4rem;
+}
+
+.tip__container {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+  row-gap: 2rem;
+}
+
+.tip__options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.tip__button {
+  font-family: inherit;
+  font-size: 2.6rem;
+  height: 5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.tip__custom {
+  background-color: var(--veryLightGrayishCyan);
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.tip__custom::placeholder {
+  color: var(--darkGrayCyan);
+}
+
+.calculation__container {
   background-color: var(--darkCyan);
   border-radius: var(--borderRadius);
   color: white;

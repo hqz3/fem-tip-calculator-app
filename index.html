@@ -10,38 +10,57 @@
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
-    <main class="container">
+    <main>
       <img class="logo" src="./public/images/logo.svg" alt="Logo" />
       <section class="calculator">
-        <div class="input">
-          <label for="bill">
+        <div class="input__container">
+          <label>
             Bill
-            <input type="number" class="bill" />
+            <span class="zero">Can't be zero</span>
+            <div class="bill__container">
+              <input type="number" class="bill__input" value="0" min="0" />
+              <img
+                class="dollar--logo"
+                src="./images/icon-dollar.svg"
+                alt="Dollar logo"
+              />
+            </div>
           </label>
+
           <div class="tip__container">
-            <p>Select tip %</p>
-            <div class="tip">
+            <p>Select Tip %</p>
+            <div class="tip__options">
               <button class="tip__button tip__percent" value="5">5%</button>
               <button class="tip__button tip__percent" value="10">10%</button>
               <button class="tip__button tip__percent" value="15">15%</button>
               <button class="tip__button tip__percent" value="25">25%</button>
               <button class="tip__button tip__percent" value="50">50%</button>
               <input
-                class="tip__button tip__custom"
                 type="number"
+                class="tip__button tip__custom"
                 placeholder="Custom"
+                min="0"
               />
             </div>
           </div>
-          <label for="">
+
+          <label>
             Number of People
-            <input type="number" class="people" />
+            <span class="zero">Can't be zero</span>
+            <div class="people__container">
+              <input type="number" class="people__input" value="0" min="0" />
+              <img
+                src="./images/icon-person.svg"
+                class="people--logo"
+                alt="People logo"
+              />
+            </div>
           </label>
         </div>
 
-        <div class="calculation">
+        <div class="calculation__container">
           <div class="tip__per">
-            <p>Tip Amount</p>
+            <p>Tip mount</p>
             <p class="per__person">/ person</p>
             <p class="price">$</p>
           </div>
