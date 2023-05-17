@@ -1,2 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
 :root {
+  --mobile: 375px;
+  --desktop: 1440px;
+
+  /* Primary */
+  --strongCyan: hsl(172, 67%, 45%);
+
+  /* Neutral */
+  --darkCyan: hsl(183, 100%, 15%);
+  --grayCyan: hsl(184, 14%, 56%);
+  --darkGrayCyan: hsl(186, 14%, 43%);
+  --lightGrayCyan: hsl(185, 41%, 84%);
+  --veryLightGrayishCyan: hsl(189, 41%, 97%);
+
+  --borderRadius: 1.9rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Space Mono", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--lightGrayCyan);
+  font-size: 2.4rem;
+
+  position: relative;
+}
+
+.container {
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.logo {
+  display: flex;
+  margin-bottom: 7rem;
+  margin-inline: auto;
+}
+
+.calculator {
+  background-color: white;
+  border-radius: var(--borderRadius);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  height: 47rem;
+  margin-inline: auto;
+  padding: 3rem;
+  width: 92rem;
+}
+
+.calculation {
+  background-color: var(--darkCyan);
+  border-radius: var(--borderRadius);
+  color: white;
+  font-size: 1.6rem;
+  padding: 3rem;
+}
+
+.per__person {
+  color: var(--darkGrayCyan);
 }
