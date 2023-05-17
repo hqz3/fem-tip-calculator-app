@@ -55,8 +55,11 @@ button {
 }
 
 button:hover {
-  background-color: var(--strongCyan);
-  color: var(--darkCyan);
+  transition: 0.25s;
+}
+
+button:active {
+  scale: 0.98;
 }
 
 main {
@@ -105,7 +108,7 @@ main {
   background-color: var(--veryLightGrayishCyan);
   border-radius: 0.5rem;
   border: none;
-  color: var(--lightGrayCyan);
+  color: var(--grayCyan);
   display: block;
   font-family: inherit;
   font-size: 2.8rem;
@@ -114,6 +117,11 @@ main {
   padding: 1rem;
   text-align: end;
   width: 100%;
+}
+
+.bill__input::placeholder,
+.people__input::placeholder {
+  color: var(--grayCyan);
 }
 
 .bill__input:focus,
@@ -134,16 +142,17 @@ main {
   right: 0;
   color: orange;
 }
+
 .zero.error {
   display: inline-block;
 }
 
 .dollar--logo,
 .people--logo {
+  margin-left: 2rem;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  margin-left: 2rem;
   width: 1.4rem;
 }
 
@@ -162,16 +171,27 @@ main {
 
 .tip__button {
   font-family: inherit;
-  font-size: 2.6rem;
+  font-size: 2rem;
   height: 5rem;
   text-align: center;
   width: 100%;
+}
+
+.tip__percent:hover {
+  background-color: var(--strongCyan);
+  color: var(--darkCyan);
+}
+
+.tip__percent.active {
+  background-color: var(--strongCyan);
+  color: var(--darkCyan);
 }
 
 .tip__custom {
   background-color: var(--veryLightGrayishCyan);
   border-radius: 0.5rem;
   border: none;
+  color: var(--darkCyan);
 }
 
 .tip__custom::placeholder {
@@ -182,10 +202,53 @@ main {
   background-color: var(--darkCyan);
   border-radius: var(--borderRadius);
   color: white;
+  display: flex;
+  flex-direction: column;
   font-size: 1.6rem;
-  padding: 3rem;
+  gap: 3rem;
+  padding: 4rem;
 }
 
-.per__person {
+.calculation__tip,
+.calculation__total {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.calculation__title {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.calculation__per {
+  grid-column: 1/2;
+  grid-row: 2/-1;
+}
+
+.calculation__price {
+  color: var(--strongCyan);
+  font-size: 3.4rem;
+  grid-column: 2/-1;
+  grid-row: 1/-1;
+  justify-self: flex-end;
+}
+
+.calculation__per {
   color: var(--darkGrayCyan);
+}
+
+.calculation__reset {
+  background-color: var(--strongCyan);
+  color: var(--darkCyan);
+  font-size: 2rem;
+  height: 5rem;
+  margin-inline: auto;
+  margin-top: auto;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.calculation__reset:hover {
+  background-color: var(--lightGrayCyan);
 }
