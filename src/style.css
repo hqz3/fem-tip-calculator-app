@@ -202,11 +202,12 @@ main {
   display: flex;
   flex-direction: column;
   font-size: 1.6rem;
-  gap: 4rem;
+  gap: 2rem;
   padding: 4rem;
 }
 
-.calculation__tip,
+.calculation__tipPer,
+.calculation__totalPer,
 .calculation__total {
   display: grid;
   align-items: center;
@@ -237,6 +238,10 @@ main {
 
 .calculation__per {
   color: var(--darkGrayCyan);
+}
+
+.calculation__total > .calculation__title {
+  grid-row: 1/-1;
 }
 
 .calculation__reset {

@@ -6,6 +6,7 @@ let tipPercent: number = 0;
 
 let tipPerPerson: number = 0;
 let totalPerPerson: number = 0;
+let totalAmount: number = 0;
 
 const billInput = document.querySelector(".bill__input") as HTMLInputElement;
 const peopleInput = document.querySelector(
@@ -20,8 +21,11 @@ const tipCustomInput = document.querySelector(
   ".tip__custom"
 ) as HTMLInputElement;
 
-const tipAmountEl = document.querySelector(
-  ".calculation__tip .calculation__price"
+const tipPerEl = document.querySelector(
+  ".calculation__tipPer .calculation__price"
+) as HTMLElement;
+const totalPerEl = document.querySelector(
+  ".calculation__totalPer .calculation__price"
 ) as HTMLElement;
 const totalAmountEl = document.querySelector(
   ".calculation__total .calculation__price"
@@ -38,12 +42,14 @@ function calculate() {
   const totalPerPersonBeforeTip = bill / people;
   tipPerPerson = totalPerPersonBeforeTip * (tipPercent / 100);
   totalPerPerson = totalPerPersonBeforeTip + tipPerPerson;
+  totalAmount = totalPerPerson * people;
   renderCalculation();
 }
 
 function renderCalculation() {
-  tipAmountEl.innerHTML = `$${tipPerPerson.toFixed(2)}`;
-  totalAmountEl.innerHTML = `$${totalPerPerson.toFixed(2)}`;
+  tipPerEl.innerHTML = `$${tipPerPerson.toFixed(2)}`;
+  totalPerEl.innerHTML = `$${totalPerPerson.toFixed(2)}`;
+  totalAmountEl.innerHTML = `$${totalAmount.toFixed(2)}`;
 }
 
 [billInput, peopleInput].forEach((input, index) => {
@@ -90,12 +96,14 @@ resetButton?.addEventListener("click", () => {
   tipPercent = 0;
   tipPerPerson = 0;
   totalPerPerson = 0;
+  totalAmount = 0;
 
   clearTips();
   clearCustomTip();
 
   billInput.value = "";
   peopleInput.value = "";
-  tipAmountEl.innerHTML = "$0.00";
+  tipPerEl.innerHTML = "$0.00";
+  totalPerEl.innerHTML = "$0.00";
   totalAmountEl.innerHTML = "$0.00";
 });
