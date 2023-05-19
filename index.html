@@ -11,7 +11,7 @@
   <body>
     <main>
       <img class="logo" src="images/logo.svg" alt="Logo" />
-      <section class="calculator">
+      <div class="calculator">
         <div class="input__container">
           <div class="bill__container">
             <label for="bill__input">Bill</label>
@@ -19,6 +19,7 @@
             <div>
               <input
                 type="number"
+                id="bill__input"
                 class="bill__input"
                 placeholder="0"
                 min="0"
@@ -55,6 +56,7 @@
             <div>
               <input
                 type="number"
+                id="people__input"
                 class="people__input"
                 placeholder="0"
                 min="0"
@@ -86,7 +88,7 @@
           </div>
           <button class="calculation__reset">Reset</button>
         </div>
-      </section>
+      </div>
     </main>
   </body>
 </html>
