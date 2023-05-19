@@ -212,7 +212,6 @@ main {
   align-items: center;
   grid-template-columns: auto 1fr;
   grid-template-rows: repeat(2, auto);
-  overflow-x: scroll;
 }
 
 .calculation__title {
@@ -232,8 +231,8 @@ main {
   grid-column: 2/-1;
   grid-row: 1/-1;
   justify-self: flex-end;
-  max-width: 100%;
-  overflow-x: scroll;
+  max-width: 95%;
+  overflow-x: auto;
 }
 
 .calculation__per {
