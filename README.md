@@ -27,15 +27,16 @@ Users should be able to:
 ### Screenshot
 
 #### Mobile
+
 ![localhost_5173_(iPhone SE)](https://github.com/hqz3/fem-tip-calculator-app/assets/68667158/ba22165c-c157-4d9c-87ee-f1d2d54d7438)
 
 #### Desktop
-![localhost_5173_(Nest Hub Max)](https://github.com/hqz3/fem-tip-calculator-app/assets/68667158/17bf3ece-c7eb-4a7b-9ca4-f5ef89895a5d)
 
+![localhost_5173_(Nest Hub Max)](https://github.com/hqz3/fem-tip-calculator-app/assets/68667158/17bf3ece-c7eb-4a7b-9ca4-f5ef89895a5d)
 
 ### Links
 
-- [Solution URL](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX/hub)
+- [Solution URL](https://www.frontendmentor.io/solutions/mobileresponsive-tip-calculator-using-functional-typescript-GXeZ97wlmA)
 - [Live Site URL](https://hqz3.github.io/fem-tip-calculator-app/)
 
 ## My process
