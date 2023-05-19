@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+
+    <title>Splitter | Tip calculator app</title>
+    <script type="module" crossorigin src="/fem-tip-calculator-app/assets/index-e9b9425f.js"></script>
+    <link rel="stylesheet" href="/fem-tip-calculator-app/assets/index-5645e970.css">
+  </head>
+  <body>
+    <main>
+      <img class="logo" src="images/logo.svg" alt="Logo" />
+      <section class="calculator">
+        <div class="input__container">
+          <label>
+            Bill
+            <span class="zero" aria-hidden="true">Can't be zero</span>
+            <div class="bill__container">
+              <input
+                type="number"
+                class="bill__input"
+                placeholder="0"
+                min="0"
+              />
+              <img
+                class="dollar--logo"
+                src="images/icon-dollar.svg"
+                alt="Dollar logo"
+              />
+            </div>
+          </label>
+
+          <div class="tip__container">
+            <p>Select Tip %</p>
+            <div class="tip__options">
+              <button class="tip__button tip__percent" value="5">5%</button>
+              <button class="tip__button tip__percent" value="10">10%</button>
+              <button class="tip__button tip__percent" value="15">15%</button>
+              <button class="tip__button tip__percent" value="25">25%</button>
+              <button class="tip__button tip__percent" value="50">50%</button>
+              <input
+                type="number"
+                class="tip__button tip__custom"
+                placeholder="Custom"
+                min="0"
+                max="1000000000"
+              />
+            </div>
+          </div>
+
+          <label>
+            Number of People
+            <span class="zero" aria-hidden="true">Can't be zero</span>
+            <div class="people__container">
+              <input
+                type="number"
+                class="people__input"
+                placeholder="0"
+                min="0"
+                max="1000000000"
+              />
+              <img
+                src="images/icon-person.svg"
+                class="people--logo"
+                alt="People logo"
+              />
+            </div>
+          </label>
+        </div>
+
+        <div class="calculation__container">
+          <div class="calculation__tip">
+            <p class="calculation__title">Tip Amount</p>
+            <p class="calculation__per">/ person</p>
+            <p class="calculation__price">$0.00</p>
+          </div>
+          <div class="calculation__total">
+            <p class="calculation__title">Total</p>
+            <p class="calculation__per">/ person</p>
+            <p class="calculation__price">$0.00</p>
+          </div>
+          <button class="calculation__reset">Reset</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
