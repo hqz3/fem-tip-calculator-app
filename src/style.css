@@ -99,7 +99,9 @@ main {
 }
 
 .bill__container,
-.people__container {
+.people__container,
+.bill__container > div,
+.people__container > div {
   position: relative;
 }
 

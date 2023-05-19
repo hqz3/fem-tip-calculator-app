@@ -13,10 +13,10 @@
       <img class="logo" src="images/logo.svg" alt="Logo" />
       <section class="calculator">
         <div class="input__container">
-          <label>
-            Bill
+          <div class="bill__container">
+            <label for="bill__input">Bill</label>
             <span class="zero" aria-hidden="true">Can't be zero</span>
-            <div class="bill__container">
+            <div>
               <input
                 type="number"
                 class="bill__input"
@@ -29,7 +29,7 @@
                 alt="Dollar logo"
               />
             </div>
-          </label>
+          </div>
 
           <div class="tip__container">
             <p>Select Tip %</p>
@@ -49,10 +49,10 @@
             </div>
           </div>
 
-          <label>
-            Number of People
+          <div class="people__container">
+            <label for="people__input"> Number of People </label>
             <span class="zero" aria-hidden="true">Can't be zero</span>
-            <div class="people__container">
+            <div>
               <input
                 type="number"
                 class="people__input"
@@ -66,7 +66,7 @@
                 alt="People logo"
               />
             </div>
-          </label>
+          </div>
         </div>
 
         <div class="calculation__container">
