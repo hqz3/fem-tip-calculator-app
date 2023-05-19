@@ -7,18 +7,18 @@
     
 
     <title>Splitter | Tip calculator app</title>
-    <script type="module" crossorigin src="/fem-tip-calculator-app/assets/index-e9b9425f.js"></script>
-    <link rel="stylesheet" href="/fem-tip-calculator-app/assets/index-5645e970.css">
+    <script type="module" crossorigin src="/fem-tip-calculator-app/assets/index-0b510413.js"></script>
+    <link rel="stylesheet" href="/fem-tip-calculator-app/assets/index-a76f75df.css">
   </head>
   <body>
     <main>
       <img class="logo" src="images/logo.svg" alt="Logo" />
       <section class="calculator">
         <div class="input__container">
-          <label>
-            Bill
+          <div class="bill__container">
+            <label for="bill__input">Bill</label>
             <span class="zero" aria-hidden="true">Can't be zero</span>
-            <div class="bill__container">
+            <div>
               <input
                 type="number"
                 class="bill__input"
@@ -31,7 +31,7 @@
                 alt="Dollar logo"
               />
             </div>
-          </label>
+          </div>
 
           <div class="tip__container">
             <p>Select Tip %</p>
@@ -39,8 +39,8 @@
               <button class="tip__button tip__percent" value="5">5%</button>
               <button class="tip__button tip__percent" value="10">10%</button>
               <button class="tip__button tip__percent" value="15">15%</button>
-              <button class="tip__button tip__percent" value="25">25%</button>
-              <button class="tip__button tip__percent" value="50">50%</button>
+              <button class="tip__button tip__percent" value="18">18%</button>
+              <button class="tip__button tip__percent" value="20">20%</button>
               <input
                 type="number"
                 class="tip__button tip__custom"
@@ -51,10 +51,10 @@
             </div>
           </div>
 
-          <label>
-            Number of People
+          <div class="people__container">
+            <label for="people__input"> Number of People </label>
             <span class="zero" aria-hidden="true">Can't be zero</span>
-            <div class="people__container">
+            <div>
               <input
                 type="number"
                 class="people__input"
@@ -68,18 +68,22 @@
                 alt="People logo"
               />
             </div>
-          </label>
+          </div>
         </div>
 
         <div class="calculation__container">
-          <div class="calculation__tip">
+          <div class="calculation__tipPer">
             <p class="calculation__title">Tip Amount</p>
             <p class="calculation__per">/ person</p>
             <p class="calculation__price">$0.00</p>
           </div>
-          <div class="calculation__total">
+          <div class="calculation__totalPer">
             <p class="calculation__title">Total</p>
             <p class="calculation__per">/ person</p>
+            <p class="calculation__price">$0.00</p>
+          </div>
+          <div class="calculation__total">
+            <p class="calculation__title">Total Amount</p>
             <p class="calculation__price">$0.00</p>
           </div>
           <button class="calculation__reset">Reset</button>
